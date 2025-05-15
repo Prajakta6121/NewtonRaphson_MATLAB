@@ -1,0 +1,66 @@
+clc; clear all; close all;
+
+% Function 1: f1(x) = x^2 - 9
+f1 = inline('x^2 - 9');
+df1 = inline('2*x');
+x01 = 5;
+disp(f1)
+tic
+[root, iterations] = newtonraphson(f1, df1, x01);
+root;
+iterations;
+toc
+disp('Prajakta Panda')
+disp('234016121')
+
+% Function 2: f2(x) = x^5 - x - 1
+f2 = inline('x^5 - x - 1');
+df2 = inline('5*x^4 - 1');
+x02 = 1.5;
+disp(f2)
+tic
+[root, iterations] = newtonraphson(f2, df2, x02);
+root;
+iterations;
+toc
+disp('Prajakta Panda')
+disp('234016121')
+
+% Function 3: f3(x) = x * exp(-x)
+f3 = inline('x*exp(-x)');
+df3 = inline('exp(-x) - x*exp(-x)');
+x03 = 0.5;
+disp(f3)
+tic
+[root, iterations] = newtonraphson(f3, df3, x03);
+root;
+iterations;
+toc
+disp('Prajakta Panda')
+disp('234016121')
+
+% Function 4: f4(x) = 2*cos(3*x) - exp(x)
+f4 = inline('2*cos(3*x) - exp(x)');
+df4 = inline('-6*sin(3*x) - exp(x)');
+x04 = 0;
+disp(f4)
+tic
+[root, iterations] = newtonraphson(f4, df4, x04);
+root;
+iterations;
+toc
+disp('Prajakta Panda')
+disp('234016121')
+
+% Function 5: f5(x) = (x - 1)^5
+f5 = inline('(x - 1)^5');
+df5 = inline('5*(x - 1)^4');
+x05 = 2;
+disp(f5)
+tic
+[root, iterations] = newtonraphson(f5, df5, x05);
+root;
+iterations;
+toc
+disp('Prajakta Panda')
+disp('234016121')
